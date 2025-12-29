@@ -68,6 +68,9 @@ while run:
             speed_x *= -1
             speed_y *= 1
 
+        if ball.rect.y <= 0 or ball.rect.y >= win_height - 20:
+            speed_y *= -1
+
         if ball.rect.x < 0:
             finish = True
             window.blit(lose1, (200, 200))
